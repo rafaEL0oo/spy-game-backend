@@ -62,6 +62,7 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(4000, () => {
-  console.log("Serwer działa na http://localhost:4000");
+const PORT = process.env.PORT || 4000;
+server.listen(PORT, () => {
+  console.log("Serwer działa na porcie " + PORT);
 });
